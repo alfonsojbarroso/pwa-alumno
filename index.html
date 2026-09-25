@@ -1,22 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <title>PWA</title>
+    <meta charset="UTF-8">
+    <title>PWA Clientes</title>
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-    <div>
-        <h1>Progressive Web Pages</h1>
+    <h1>Lista de Clientes</h1>
+    <div id="customer-list">Cargando...</div>
 
-        <p>Construir soluciones de software y sistemas inteligentes mediante la gestión de proyectos, integración de
-            metodologías, modelos y herramientas de desarrollo bajo la normatividad aplicable para la optimización de
-            proyectos de investigación, innovación, desarrollo tecnológico y de emprendimiento.</p>
-        <ul>
-            <li>Introducción a aplicaciones web progresivas <a href=""></a> </li>
-            <li>Desarrollo de aplicaciones web progresivas</li>
-        </ul>
-    </div>
+    <!-- Script principal como módulo -->
+    <script type="module" src="./js/app.js"></script>
+
+    <!-- Registro del Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
 </body>
-<script src="/main.js"></script>
 
 </html>
