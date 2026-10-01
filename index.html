@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PWA Clientes</title>
+    <title>PWA Alumnos</title>
     <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-    <h1>Lista de Clientes</h1>
+    <h1>Lista de Alumnos</h1>
     <div id="customer-list">Cargando...</div>
 
     <!-- Script principal como módulo -->
@@ -16,7 +16,7 @@
 
     <!-- Registro del Service Worker -->
     <script>
-        if ('serviceWorker' in navigator) {
+        if (navigator.serviceWorker) {
             navigator.serviceWorker.register('./sw.js');
         }
     </script>
