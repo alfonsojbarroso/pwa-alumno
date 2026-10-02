@@ -41,7 +41,7 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
 
     // Estrategia especial para la API de clientes: Network First
-    if (url.pathname.includes('/api/v1/customer')) {
+    if (url.pathname.includes('/alumno')) {
         event.respondWith(
             fetch(event.request)
                 .then((networkResponse) => {

@@ -1,17 +1,17 @@
 // js/ui.js
-export function renderCustomers(customers) {
+export function renderCustomers(alumnos) {
     const container = document.getElementById('customer-list');
     if (!container) return;
 
     container.innerHTML = '';
-    
-    customers.forEach(customer => {
+
+    alumnos.forEach(alumno => {
         const item = document.createElement('div');
         item.className = 'customer-card';
         item.innerHTML = `
-            <h3>${customer.name}</h3>
-            <p>ID: ${customer.id}</p>
-            <p>Teléfono: ${customer.phone}</p>
+            <h3>${alumno.name}</h3>
+            <p>ID: ${alumno.id}</p>
+            <p>Teléfono: ${alumno.phone}</p>
         `;
         container.appendChild(item);
     });
